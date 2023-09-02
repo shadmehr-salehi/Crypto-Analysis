@@ -42,11 +42,11 @@ with open('output.csv', 'w', encoding='utf-8') as f:
 driver.quit()
 '''
 
-Names = ["bitcoin", "ethereum", "tether"] # Replace with your list of currency names
+Names = ["bitcoin", "ethereum", "tether"]
 
 for name in Names:
     driver.get(f"https://coinmarketcap.com/currencies/{name}/historical-data/")
-    # Click on the first button
+
     button1 = driver.find_element(By.CLASS_NAME, "sc-16891c57-0 dalfmx BaseButton_base__aMbeB BaseButton_v-primary__zw8Vo BaseButton_t-default__fZuC3 BaseButton_size-md__jbSJR BaseButton_vd__2Cn0v")
     button1.click()
 
